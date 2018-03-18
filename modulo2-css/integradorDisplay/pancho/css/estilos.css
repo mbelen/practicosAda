@@ -1,0 +1,156 @@
+*{
+	margin:0;
+	padding: 0;
+
+}/*reseteo la caracteristica por defecto del navegador VER LO DE NORMALIZE.CSS*/
+
+.wrapper{
+	width: 70%;
+	margin: 0 auto;
+}
+
+header, .contAzul, footer{
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+header{
+	background: black;
+	color: white;
+	text-align: center;
+}
+
+h1{
+	display: inline-block;
+	margin: 0 3%;
+	font-size: 2em;
+	font-family: 'Give You Glory', cursive;
+}
+
+.imgDer{
+	margin-left: 3%;
+}
+
+.imgIzq{
+	margin-right: 3%;
+}
+
+nav{
+   margin:1% auto;
+}
+
+nav ul{
+	text-align: center;/*como es en bloque, con ésto ya centro los li*/
+}
+
+nav ul li{
+	background: orange;
+	list-style: none;
+	display: inline-block;
+	margin-right: 1.5%;
+	margin-left: 1.5%;
+	padding: 0.5%;
+	font-size: 1.5em;
+	font-family: arial;
+}
+
+nav ul li a{
+	color: white;
+	text-decoration: none;
+}
+
+.fila, .contAzul, footer{
+	margin: 0 auto;
+	width: 90%;
+}
+
+.pink{
+	background: #A901DB;
+	width:47%;
+	display: inline-block;
+	height: 200px;
+	margin: 2.4%;
+}
+
+.contAzul{
+	background: blue;
+	height: 100px;
+}
+
+.contAzul img {
+	float: right;
+}
+
+.green{
+	background: green;
+	width: 29%;
+	display: inline-block;
+	margin: 2.7%;
+	height: 300px;	
+}
+
+.alignDer{
+	margin-right: 0;
+}
+
+.alignIzq{
+	margin-left: 0;
+}
+
+footer{
+	background: yellow;
+}
+
+footer img{
+ 	margin-left: 1%;
+}
+
+@media all and (max-width: 480px) {
+
+.wrapper{
+	width: 100%;
+}
+
+.imgDer, .contAzul img, .green{
+	display: none;
+}
+    
+nav{
+	position: fixed;
+	text-align: right;
+	top: 50%;
+	right: 0;
+}
+
+nav ul li{
+	display: block;
+	margin: 0;	
+	font-size: 1.2em;
+}
+
+.pink{
+	width:100%;
+	display: block;
+}
+
+.alignIzq{
+	margin: 2% 0 0 0;
+}
+
+.alignDer{
+	margin: 0 0 3% 0;
+}
+
+footer{
+	margin-top: 3%; 
+}
+
+}
+
+@media (min-width: 480px) and (max-width: 600px){
+
+.wrapper{
+	width: 100%;
+}
+}
+
