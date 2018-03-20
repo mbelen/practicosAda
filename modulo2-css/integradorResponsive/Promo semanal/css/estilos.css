@@ -1,0 +1,111 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#mainContainer{
+	width: 70%;
+	margin: 3% auto;
+	font-family: Tahoma;
+}
+
+header{
+	padding-top: 2%;
+	padding-bottom: 4%;
+	font-size: 1em;
+}
+
+nav{
+	display: inline-block;
+	margin: 3%;
+}
+
+nav a{
+	text-decoration: none;
+	color: black;
+}
+
+.colorMenu{
+	color: blue;
+}
+
+header img{
+	width: 40px;
+	height: auto;
+	float: right;
+	margin-right: 7%;
+}
+
+.clearfix{
+	clear: both;
+}
+
+.posicCartera{
+	float: left;
+	width: 30%;
+	margin: 1%;
+}
+
+figure{
+	text-align: center;
+}
+
+figure img{
+	width: 200px;
+	height: 200px;
+}
+
+figcaption{
+	text-align: center;
+	font-size: 0.7em;
+}
+
+@media screen and (max-width: 480px) {
+#mainContainer{
+	width: 90%;
+}
+
+header{
+	font-size: 0.7em;	
+}
+
+header img{
+	width: 30px;
+	height: auto;
+	margin-right: 3%;
+}
+
+.posicCartera{
+	float: none;
+	width: 100%;
+}
+
+figure img{
+	width: 180px;
+	height: 180px;
+}
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+#mainContainer{
+	width: 95%;
+}
+
+header{
+	font-size: 0.8em;	
+}
+
+header img{
+	margin-right: 3%;
+}
+
+figure img{
+	width: 180px;
+	height: 180px;
+}
+
+
+}
+
+
