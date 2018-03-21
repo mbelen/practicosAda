@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		formulario
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<section id="mainContainer">
+
+		<form action="" method="">
+			<section id="nombre">
+				<label for="name">Nombre</label>			
+				<input class="ancho borde" type="text" id="name" value=""/>
+				<label for="lastname">Apellido</label>
+				<input class="ancho borde" type="text" id="lastname" value=""/>
+				<label for="email">Email</label>
+				<input class="ancho borde" type="email" id="email" value=""/>	
+			</section>
+
+			<section id="genero">
+				<label class="distanciaSubt">Género</label>	
+				<section class="fila">
+					<input  class="espacio" type="radio" name="genero" value="F">
+					<label>Femenino</label>	
+					<input class="espacio" type="radio" name="genero" value="M">
+					<label>Masculino</label>
+				</section>
+			</section>
+
+			<section id="nacionalidad">
+				<label class="distanciaSubt">Nacionalidad</label>
+				<select class="ancho borde" name="select">
+					<option value="1">Argentina</option>
+					<option value="2">Otro pais</option>				
+				</select>
+			</section>
+
+			<section id="temas">
+				<label class="distanciaSubt">Temas que le interesan</label>
+				<section class="fila">
+					<input class="espacio" type="checkbox" id="chbox1" name="infraestructura">
+					<label>Infraestructura</label>
+			    </section>
+			    <section class="fila">
+					<input class="espacio" type="checkbox" id="chbox1" name="programacionWeb">
+					<label>Programación Web</label>
+			    </section>
+			    <section class="fila">
+					<input class="espacio" type="checkbox" id="chbox1" name="programacionMobile">
+					<label>Programación Mobile</label>
+			    </section>
+			</section>
+
+			<section class="terminos">
+				<input class="espacio" type="checkbox" id="chbox2" name="terminosYcondiciones">
+				<label>Acepta los términos y condiciones</label>
+			</section>
+
+			<section class="botones">
+				<button type="submit" value="submit">Cancelar</button>
+				<button type="submit" value="submit">Aceptar</button>
+			</section>
+		</form>
+		
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+}
+
+#mainContainer{
+	width: 70%;;
+	border: 0.1em;
+	border-color: black;
+	border-style: solid; 	
+	padding: 3%;
+	margin-top: 3%;
+	font-family: tahoma;
+	font-size: 1em;
+}
+
+#mainContainer form{
+	display: flex;
+	flex-direction: column;
+
+}
+
+#nombre, #genero, #nacionalidad, #temas{
+	display: flex;
+	flex-direction: column;
+	padding: 1%;
+}
+
+.ancho{
+	width: 20%;
+}
+
+/*.borde{
+	border-radius: 1%;
+}*/
+
+.terminos{
+	display: flex;
+	padding: 1%;
+	align-items: center;
+}
+
+.fila,.botones{
+	display: flex;
+	align-items: center;
+}
+
+label{
+	margin-right: 2%;
+}
+
+button{
+	width: 8%;
+	padding: 0.3%;
+	margin: 2%;
+	font-size: 0.8em;
+}
+
+.distanciaSubt{
+	padding-bottom: 0.5%;
+}
+
+.espacio{
+	margin-right: 1%;
+}
