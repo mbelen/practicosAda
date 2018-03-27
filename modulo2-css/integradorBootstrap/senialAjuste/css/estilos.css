@@ -1,0 +1,107 @@
+.blanco{
+	background-color: white;
+
+}
+				
+.negro{
+	background-color: black;
+
+}
+				
+.amarillo{
+	background-color: yellow;
+
+}
+
+.celeste{
+	background-color: #00FFFF;
+
+}
+				
+.verde{
+	background-color: #00FF00;
+
+}
+
+.rosa{
+	background-color: #FF00BF;
+
+}
+
+.rojo{
+	background-color: red;
+
+}
+
+.azul{
+	background: blue;
+
+}
+
+.gris1{
+	background-color: #000000;
+}
+
+
+.gris2{
+	background-color: #1C1C1C;
+}
+
+.gris3{
+	background-color: #2E2E2E;
+}
+
+.gris4{
+	background-color: #424242;
+}
+
+.gris5{
+	background-color: #585858;
+}
+
+.gris6{
+	background-color: #6E6E6E;
+}
+
+.gris7{
+	background-color: #848484;
+}
+
+.gris8{
+	background-color: #A4A4A4;
+}
+
+.gris9{
+	background-color: #BDBDBD;
+}
+
+.gris10{
+	background-color: #D8D8D8;
+}
+
+.gris11{
+	background-color: #E6E6E6;
+}
+
+.gris12{
+	background-color: #FFFFFF;
+}
+
+.altMin{
+	height: 45px;
+}
+
+.altMax{
+	height: 410px;
+}
+
+.altMed{
+	height: 70px; 
+
+}
+
+.gradiente {
+	background:linear-gradient(to right, white, white 10%, black);
+	background-position: 0 15px;
+}
+
