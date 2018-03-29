@@ -1,6 +1,6 @@
 # Coming Soon
 
-Proyecto realizado con html y css con diseño responsive.
+Proyecto realizado con HTML y CSS con diseño responsive.
 
 ## Media queries
 
