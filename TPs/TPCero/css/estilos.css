@@ -13,14 +13,12 @@ body{
 	background-color: #fafafa;
 	display: flex;
 	flex-direction: column;
-	align-content: center;
 	font-family: 'Anaheim', sans-srif;
 }
 
 .filaFlexCent{
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 
 #comingSoon{
@@ -28,7 +26,8 @@ body{
 	height: 440px;
 	background-image: url("../img/imgComingSoon.jpg");
 	background-size: cover;
-	font-family: 'Special Elite', cursive;	
+	font-family: 'Special Elite', cursive;
+	align-items: center;	
 }
 
 #comingSoon p{
@@ -85,7 +84,6 @@ button:active {
 .redes{
 	display: flex;
 	justify-content: flex-end;
-	align-items: center;
 	margin-right: 1.5%;
 }
 
