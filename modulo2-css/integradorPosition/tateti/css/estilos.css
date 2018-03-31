@@ -1,0 +1,49 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+}
+
+#container{
+	margin: 10px;
+	text-align: center;
+}
+
+article{
+	width: 264px;
+	height: 264px;
+	display: inline-block;
+	position: relative;
+}
+
+article img{
+	position: absolute;
+	line-height: 264px;
+	top: 4px;
+	left: 4px;
+}
+
+.pink{
+	background-color: #FA5858;
+}
+
+.gray{
+	background-color: #E6E6E6;
+}
+
+.circulo{
+	position: absolute;
+	background-color: #FF0000;
+	border-radius: 50%;
+	width: 230px;
+	height: 230px;
+	border: solid;
+	border-color: #DF0101;
+	border-width: 18px;
+	top: 17px;
+	left: 17px;
+}
