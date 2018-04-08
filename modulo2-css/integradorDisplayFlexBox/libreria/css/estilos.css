@@ -1,0 +1,206 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial;
+}
+
+#container{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: auto;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	background-color: #D8D8D8;
+	align-items: center;
+	padding:3%;
+	width: 90%;
+	position: fixed;
+}
+
+header a{
+	text-decoration: none;	
+}
+
+.actual{
+	color: black;
+}
+
+#buscador{
+	display: flex;
+}
+
+#buscador input{
+	margin: 0 4%;
+	width: 17em;
+	border-radius: 5%;
+}
+
+#buscador button{
+	box-sizing: content-box;
+	width: 6em;
+	height: 1.8em;
+}
+
+.estiloBoton{
+	border-style: solid;
+	border-radius: 7%;
+	border-color:gray;
+	border-width: 1px;
+}
+
+main{
+	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+}
+
+.linea{
+	margin-top: 2%;
+	margin-bottom: 3%;
+	display: flex;
+	justify-content: space-between;
+}
+
+figure{
+	width: 20%;
+	background-color: #D8D8D8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+figure img{
+	margin-top: 6%;
+	width: 80%;
+	height: auto;
+}
+
+figcaption{
+	padding: 4% 7%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 0.8em;
+	flex: 1 1 auto;/*buena solución para que todos figc queden alineados*/
+}
+
+figcaption h4{
+	text-align: center;
+}
+
+figcaption p{
+	text-align: center;
+	margin: 3% 0;
+}
+
+figcaption form{
+	display: flex;
+	justify-content: center;
+}
+
+figcaption form button{
+	box-sizing: content-box;
+	width: 6em;
+	height: 2em;
+}
+
+@media (max-width: 480px) {
+
+#container{
+	width: 100%;
+}
+
+header{
+	flex-direction: column;
+	padding: 5%;
+	width: 100%;
+}
+
+#buscador{
+	width: 100%;
+	order: 1;
+	margin: 4% 0 6% 0;
+	justify-content: center;
+}
+
+#buscador input{
+	width: 11em;	
+}
+
+#buscador button{
+	font-size: 12px;
+	width: 3em;
+	height: 1em;
+	padding: 2% 5%;
+}
+
+header nav{
+	order: 2;
+	align-self: flex-start;
+	font-size: 13px;
+}
+
+main{
+	margin-top:30%; 
+}
+
+.linea{
+	flex-direction: column;
+	justify-content: space-around;	
+	align-items: center;
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
+
+figure{
+	width: 70%;
+	margin-top: 5%;
+}
+
+figcaption p{
+	margin: 5% 0;
+}
+
+}
+
+@media (min-width:481px) and (max-width:768px) {
+
+header{
+	padding:5%;
+}
+
+#buscador input{
+	width: 13em;
+}
+
+#buscador button{
+	width: 5.2em;
+}
+
+main{
+	margin-top: 16%;
+}
+
+.linea{
+	flex-wrap: wrap;
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
+
+figure{
+	width: 45%;
+	margin-top: 5%;	
+}
+
+figcaption form button{
+	width: 8em;
+}
+
+}
