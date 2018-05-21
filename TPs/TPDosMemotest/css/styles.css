@@ -178,7 +178,7 @@ form h1{
 }
 
 
-@media screen and (min-width: 320px) and (max-width:720px) and (orientation:portrait) {
+@media screen and (min-width: 320px) and (max-width:720px) and (max-aspect-ratio: 13/9) {
 
 #mainJuego{
 	width: 100%;
@@ -272,7 +272,7 @@ font-size: 25px;
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 720px)  and (orientation:landscape){
+@media screen and (min-width: 320px) and (max-width: 720px)  and (min-aspect-ratio: 13/9){
 
 #mainJuego{
 	width: 100%;
