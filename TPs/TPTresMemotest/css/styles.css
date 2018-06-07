@@ -1,0 +1,710 @@
+@font-face{
+    font-family: 'starwars';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../css/fonts/Starjedi.ttf') format("truetype");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/Dark-Space-Wallpapers-HD.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;    
+}
+
+main{
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#mainJuego{
+    width: 90%;
+    margin:auto;
+    padding:0 3em;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;  
+    font-family: 'Rajdhani', sans-serif;
+}
+
+#memo{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.linea{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.linea figure{
+    -webkit-perspective: 1000;
+            perspective: 1000;
+    width: 10em;
+    height: 10em;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: relative;
+    display: inline-block;  
+    margin: 0.3em;
+}
+
+.linea figure img{
+    width: 100%;
+    height: auto;
+    border-width: 2.5px;
+    border-color:#BDBDBD;
+    border-style: solid;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform-style:preserve-3d;
+             transform-style: preserve-3d;
+    position: absolute;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.back{
+    -webkit-transform:rotateY(-180deg);
+           transform: rotateY(-180deg); 
+}
+
+.front{
+    -webkit-transform:rotateY(0deg);;
+           transform: rotateY(0deg);
+}
+
+#info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    letter-spacing: 0.2em;
+}
+
+#infoNombreIntentos{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0.3em;
+}
+
+#info figure{
+    width:19em; 
+    height:auto;
+}
+
+#info figure img{
+    width:100%; 
+    height:auto;
+}
+
+#info h1{
+    margin:0.5em;
+    color:#BDBDBD;
+    font-size: 2.1em;   
+}
+
+#info h2{
+    margin:0.5em;
+    display: inline-block;  
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    color: #FE2E2E;
+}
+
+#mainIndex{ 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column;    
+    -webkit-box-pack: center;       
+        -ms-flex-pack: center;      
+            justify-content: center;
+}
+
+#form{  
+    width: 100%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+}
+
+#form h1{
+    font-family: 'starwars',sans-serif;
+    font-size: 6.2em;
+    padding: 0.1em;
+    color: #FFFE0E;
+}
+
+#formDatos{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.colorGray{
+    color:#BDBDBD;
+}
+
+#mjeObligatorio{
+    height: 2em;
+    text-align: center;
+    padding: 0.5em;
+    font-family:'Rajdhani', sans-serif;
+    color: #FE2E2E;  
+}
+
+#button,#inputNombre,#select{
+    height: 2.5em;
+    font-size: 16px;
+    border-radius: 0.3em;
+    border: 1px solid black;
+    margin: 0 0.5em;
+}
+
+#inputNombre{
+    width: 14em;
+    padding: 0 0.8em;
+}
+
+#select{
+    width: 10em;
+    padding: 0 0.8em;
+}
+
+#button{
+    width: 7em;
+}
+
+#sectionLoco section{
+   position: relative; 
+   height: 6em;
+   width: 6em;
+   border: none;
+   top: 7em;
+   left: -25em;
+   background:#FE2E2E;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center; 
+   -webkit-transition: all 1s ease-in-out; 
+   transition: all 1s ease-in-out;
+   border-radius: 50%;
+}
+
+#sectionLoco section p {
+    text-align: center;
+    color: #FFFE0E;
+    font-family:'Rajdhani', sans-serif;
+    font-weight:bold;
+    -webkit-transform:rotate(-20deg);
+            transform:rotate(-20deg);
+    font-size: 0.85em;
+}
+
+#sectionLoco section:hover{
+    -webkit-transform: rotate(720deg) scale(1.2,1.2);
+            transform: rotate(720deg) scale(1.2,1.2);
+}
+
+.efectoLatido{
+    animation: latido 1s;
+    -webkit-animation: latido 1s;
+    -moz-animation: latido 1s;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes latido { 
+    0% {background-color: #FB0303}
+    100%{background-color: #A50202} 
+}
+
+#mainRanking{
+    width: 80%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+#mainRanking h1{
+    font-size: 2.3em;
+    color:#FFFE0E;
+    margin:1em;
+    margin-top: 1.8em;
+    font-family: 'starwars', sans-serif;
+    text-align: center;
+}
+
+table #encabezado td{
+    color: #FE2E2E;
+}
+
+table td{
+    text-align: center;
+    font-size: 1.8em;
+    color:#BDBDBD;
+    font-family:'Rajdhani', sans-serif;  
+    padding:0.15em 1em;
+}
+
+#mainRanking a{
+    text-decoration:none;
+    font-family:'Rajdhani', sans-serif; 
+    font-size: 1.2em;
+    color: #FFFE0E;
+    margin: 3em;
+}
+
+.swal-modal{
+    background-image: url("../img/cieloestrellado.jpg");
+    border: 5px solid #BDBDBD; 
+}
+
+.swal-button{
+    width: 8em;
+    padding: 0.6em 0.4em;
+    border-radius: 2px;
+    background-color: #BDBDBD;
+    font-size: 14px;
+    border: 1px solid gray;
+}
+
+.swal-text,.swal-title{
+   color:#FFFE0E;
+   font-family:'Rajdhani', sans-serif;
+   font-weight: bold;
+   font-size: 22px;
+   letter-spacing: 0.3em;
+   padding-bottom: 1em; 
+   line-height: 2em;
+}
+
+.swal-title{
+   font-size: 35px;
+}
+
+@media screen and (min-width: 320px) and (max-width:720px) and (max-aspect-ratio: 13/9) {
+
+#mainJuego{
+    width: 100%;
+    padding:0 1em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack:start;
+        -ms-flex-pack:start;
+            justify-content:flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+}
+
+#memo{
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
+}
+
+.linea{
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+
+.linea figure{
+    width: 4.5em;
+    height: 4.5em;  
+    margin: 0.1em;
+}
+
+.linea figure img{
+    border-width: 1px;
+}
+
+#info{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    letter-spacing: 0.1em;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 2em 0 1.2em 0;
+}
+
+#info figure{
+    width:8em; 
+}
+
+#info h1{
+    margin:0.1em 0;
+    font-size: 1em; 
+}
+
+#info h2{
+    margin: 0.1em 0;    
+    font-size: 0.9em;
+    letter-spacing: 0em;
+}
+
+#form, #formDatos{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#form h1{
+    font-size: 3.3em;
+    margin-bottom: 0.3em;
+}
+
+#mjeObligatorio{
+    font-size: 14px;  
+}
+
+#inputNombre,#button,#select{
+    height: 2.3em;
+    width: 12em;
+}
+
+#inputNombre,#button{
+    margin:0.4em 0;
+}
+
+#sectionLoco section {
+   height: 4em;
+   width: 4em;
+   top: 2em;
+   left: -5.5em;
+   margin-bottom: em;
+}
+
+#sectionLoco section p {
+   font-size: 0.55em;
+}
+
+#mainRanking{
+    width: 90%;
+}
+
+#mainRanking h1{
+    font-size: 1.6em;
+    margin:0.8em;
+    margin-top: 1.5em;
+}
+
+table td{
+    font-size: 1.3em; 
+    padding:0.1em 0.5em;
+}
+
+#mainRanking a{
+    font-size: 1em;
+    margin: 2em 0 3em 1;    
+}
+
+.swal-modal {
+    border: 3px solid #BDBDBD; 
+}
+
+.swal-button {
+    width: 7em;
+    font-size: 13px;
+}
+
+.swal-text,.swal-title {
+    font-size: 15px;
+    padding-bottom: 0.3em; 
+}
+
+.swal-title {
+    font-size: 25px;
+}
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px)  and (min-aspect-ratio: 13/9){
+
+#mainJuego{
+    width: 100%;
+    padding:0 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+}
+
+.linea{
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+
+.linea figure{
+    width: 5em;
+    height: 5em;    
+    margin: 0.1em;
+}
+
+.linea figure img{
+    border-width: 1px;
+}
+
+#info{
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1.2em 0;
+}
+
+#info figure{
+    width:8em; 
+}
+
+#info h1{
+    margin:0.1em 0;
+    font-size: 0.9em;   
+}
+
+#info h2{
+    margin: 0.1em 0;    
+    font-size: 0.8em;
+    letter-spacing: 0em;
+}
+
+#form h1{
+    font-size: 4.2em;
+    padding: 0; 
+}
+
+#mjeObligatorio{
+    font-size: 14.5px;  
+}
+
+#inputNombre,#button,#select{
+    height: 2.3em;
+    font-size: 14px;
+}
+
+#inputNombre{
+    width: 11em;
+}
+
+#button{
+    width: 6em;
+}
+
+#select{
+    width: 8.5em;
+}
+
+#select,#inpuNombre{
+    padding: 0 0.4em;
+}
+
+#sectionLoco section {
+   height: 4em;
+   width: 4em;
+   top: 1em;
+   left: -12em;
+}
+
+#sectionLoco section p {
+   font-size: 0.55em;
+}
+
+#mainRanking{
+    width: 95%;
+}
+
+#mainRanking h1{
+    font-size: 1.8em;
+    margin:0.9em;
+    margin-top: 1.5em;
+}
+
+table td{
+    font-size: 1.5em; 
+    padding:0.1em 0.8em;
+}
+
+#mainRanking a{
+    font-size: 1em;
+    margin: 2em 0 3em 0;   
+}
+
+.swal-modal {
+    border: 3px solid #BDBDBD; 
+}
+
+.swal-button {
+    width: 7em;
+    font-size: 13px;
+}
+
+.swal-text,.swal-title {
+    font-size: 15px;
+    padding-bottom: 0.3em; 
+}
+
+.swal-title {
+    font-size: 25px;
+}
+}
+
+@media screen and (min-width: 721px) and (max-width: 1024px) and (orientation:portrait) {
+
+#mainJuego{
+    width: 100%;
+    padding:0 1em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack:start;
+        -ms-flex-pack:start;
+            justify-content:flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+}
+
+#memo{
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
+}
+
+.linea{
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+
+.linea figure img{
+    border-width: 2px;
+}
+
+#info{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    letter-spacing: 0.1em;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 90%;
+    margin: 3em auto;
+    margin-bottom: 2em;
+}
+
+#info figure{
+    width:15em; 
+}
+
+#info h1{
+    font-size: 2em; 
+}
+
+#info h2{   
+    font-size: 1.7em;
+}
+
+#button{
+    width: 6em;
+}
+
+#sectionLoco section {
+   top: 10em;
+   left: -16em;
+}
+
+.swal-modal{
+    border: 4px solid #BDBDBD; 
+}
+
+.swal-button{
+    font-size: 13px;
+}
+
+.swal-text,.swal-title{
+    font-size: 21px;
+    padding-bottom: 0.5em; 
+}
+
+.swal-title{
+    font-size: 28px;
+}
+}
