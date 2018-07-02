@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		title Galería con paginado
+		script(src='/javascripts/jquery.js')
+		script(src='/javascripts/index.js')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		main
+			section#filtros
+				h1 Filtros
+				form#filto(ref='filtro' action='/filtro' method='get')
+					label Tamaño
+					select#tamanio(name='tamaño')
+						option(value='todos') Todos
+						option(value='pequeño') Pequeño
+						option(value='mediano')  Mediano
+						option(value='grande')  Grande
+					label Edad
+					select#edad(name='edad')
+						option(value='todos') Todos
+						option(value='cachorro') Cachorro
+						option(value='adulto') Adulto
+					label  Sexo
+					select#sexo(name='sexo')
+						option(value='todos') Todos
+						option(value='femenino') Femenino
+						option(value='masculino') Masculino
+					section.row
+						input(type='checkbox' name='favoritos' value='favoritos')
+						lavel.labelFavoritos Quiero ver favoritos
+					button#filtrar(type='submite' name='filtrar') Filtrar
+			block content

@@ -1,0 +1,216 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+h1{
+	color: #45ADA8;
+	font-size: 2em;
+	margin-bottom: 1.5em;
+}
+
+#portada{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#portada h1{
+	color: #F38630;
+}
+
+#portada img{
+	width: 100%
+	height:auto;
+}
+
+main{
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.headerGaleria{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.headerGaleria a{
+	margin-right: 5em;
+	color: #F38630;
+}
+
+.headerGaleria h1{
+	margin-bottom: 1em;
+}
+
+#galeria{
+	padding: 1em;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+}
+
+#vistas{	
+	width: 100%;
+	height: 27em;
+	text-align: center;
+}
+
+figure{
+	width:19em;
+	height: auto;
+	padding: 1em;
+	background-color: #A7DBDB;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 1em 2em;
+}
+
+figcaption{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 0.7em;
+}
+
+figcaption h3{
+	margin:0px;
+}
+
+figcaption h5,figcaption span{
+	font-size: 0.8em;
+}
+
+figure .imagen{
+	width: 100%;
+	height: auto;
+	border: solid 1px #F38630;
+	border-radius: 5px;
+	
+}
+
+figcaption img{
+	width: 32px;
+	height: auto;
+	margin-right: 0.5em;
+}
+
+.masInfoBtn,.menosInfoBtn{
+	color: #F38630;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.masInfo{
+	height: 5em;
+	text-align: left;
+}
+
+.masInfo h5{
+	margin: 0.2em 0px;
+	display: inline-block;
+}
+
+#filtros,form{
+	display: flex;
+	flex-direction: column;
+}
+
+#filtros{
+	padding: 2em;
+	padding-right: 1.5em; 
+	width: 13%;
+}
+
+form{
+	width: 100%
+}
+
+#edad,#tamanio,#sexo,#filtrar{
+	width: 10em;
+	height: 2em;
+	font-size: 0.8em;
+	margin-bottom: 1em;
+}
+
+#filtrar{
+	border-radius: 5px;
+	border: solid 1px #F38630;
+	margin-top: 2em;
+}
+
+form{
+	font-size: 1.3em;
+}
+
+.row{
+	display: flex;
+	align-items: center;
+}
+
+.labelFavoritos{
+	font-size: 0.8em;
+}
+
+#paginado{
+	text-align: center;
+}
+
+#paginado ul{
+	width: 80%;
+	display: inline-block;
+	text-align: center;
+}
+
+ul li{
+	display: inline-block;
+	margin: 0.5em;
+	width: 1em;
+	height: 1em;
+	padding: 0.7em;
+	border-radius: 50%;
+	background-color: #A7DBDB;
+}
+
+ul li a{
+	color: #F38630;
+	text-decoration: none;
+}
+
+.pagActual{
+	background-color: #0779A6;
+	border:solid 1px ; 
+	color:#F38630;
+}
+
+#error{
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 2.5em;
+}
+
+#error h2{
+	margin: 2em;
+	color: #F38630;
+}
+
+#error img{
+	width: 50%;
+	height:auto;
+}
+
+#error .color{
+	color: #45ADA8;
+}
+

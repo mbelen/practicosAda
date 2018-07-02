@@ -1,0 +1,60 @@
+extends layout
+
+block content
+	section#galeria
+		section.headerGaleria
+			h1  Galeria
+			a(href='/') Ir al inicio
+		section#vistas
+			for item in items
+				figure
+					img.imagen(src="/images/"+item.src)
+					figcaption
+						section.row
+							a.like(data-codigo=item.codigo)
+								if (item.estado)
+									img(src="/images/corazonLike.png")
+								else
+									img(src="/images/corazon.png")
+							h3=item.nombre
+						h4 
+							a.masInfoBtn + Info
+						section.masInfo(style={display:'none'})
+							h5 Edad:
+							span #{' '+item.edad}	
+							h5  Tamaño: 
+							span #{' '+item.tamaño}
+							br
+							h5 Descripción: 
+							span #{' '+item.mas}
+							h4
+								a.menosInfoBtn - Info
+		section#paginado
+			ul
+				if pagActual>1						
+					li
+						a(href='/filtro/pages/'+pagAnt) <
+
+				- for(var x=pagAnt;x<=pagSig;x++)
+					if (x!=0 && x<=numPaginas)          								
+						if x==pagActual
+							li.pagActual
+								a(href='/filtro/pages/'+x)=x
+						else	
+							li
+								a(href='/filtro/pages/'+x)=x				
+					
+				if pagActual<numPaginas
+					li
+						a(href='/filtro/pages/'+pagSig) >
+							
+
+
+
+
+			
+		
+
+
+
+
