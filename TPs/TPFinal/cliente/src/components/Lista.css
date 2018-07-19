@@ -1,0 +1,54 @@
+*{
+	font-family: Verdana;
+}
+
+ul li{
+	list-style: none;
+}
+
+li img{
+	width: 180px;
+	height: 180px;
+	height: auto;
+	border-radius: 4px;
+	margin: 0.7em;
+	margin-left: 1em;
+}
+
+.Item{
+	display: flex;
+	width: 70%;
+	margin:auto;
+	background-color: white;
+	margin-bottom: 0.8em;
+	padding: 1em;
+}
+
+.Info{
+	flex-grow: 2;
+	margin-left: 1em;
+	display: flex;
+	justify-content: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Titulo, .Precio{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+.Precio{
+	font-weight: bold;
+}
+
+.Ubicacion{
+	width: 10em;
+	color: #404040;
+	font-size: 0.8em;
+}
+
+.Link{
+	text-decoration: none;
+	color: black;
+}
