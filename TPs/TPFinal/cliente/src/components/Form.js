@@ -13,7 +13,7 @@ class Form extends Component {
 		        	<section className='ContenedorIcono'>
 		        		<img className='Icono' src={icono}/>
 		        	</section>
-		        	<input className='inputSearch' type="text" placeholder='Nunca dejes de buscar' name="search" />
+		        	<input className='inputSearch' type="text" placeholder='Nunca dejes de buscar' name="q" />
 		        	<button type="submit" className="Boton"><img src={busquedaLupa}/></button>
 		        </form>
 	      </section>

@@ -21,7 +21,7 @@ class Lista extends Component {
   componentDidMount(){ 
 
   	const busqueda = queryString.parse(this.props.location.search)
-   	fetch(`/items?search=${busqueda.search}`)
+   	fetch(`/items?search=${busqueda.q}`)
    .then(res=>res.json())
    .then(res=>this.setState({products:res}))
    .catch(function(e){
