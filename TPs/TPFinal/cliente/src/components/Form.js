@@ -9,7 +9,7 @@ class Form extends Component {
     return (
       <section className="Search">
 	      <section className='ContForm'>
-		        <form action='/items' method='get'>
+		        <form action='/api/items' method='get'>
 		        	<section className='ContenedorIcono'>
 		        		<img className='Icono' src={icono}/>
 		        	</section>

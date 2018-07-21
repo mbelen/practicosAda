@@ -21,7 +21,7 @@ class Lista extends Component {
   componentDidMount(){ 
 
   	const busqueda = queryString.parse(this.props.location.search)
-   	fetch(`/items?search=${busqueda.q}`)
+   	fetch(`/api/items?search=${busqueda.q}`)
    .then(res=>res.json())
    .then(res=>this.setState({products:res}))
    .catch(function(e){
@@ -40,7 +40,7 @@ class Lista extends Component {
           <ul className='Lista'>    	
             {this.state.products.items.map((p,index) => (<li className='Item' key={p.id}>
                                                       
-                                                      <a href={'/items/'+p.id+'/description'}>
+                                                      <a href={'/api/items/'+p.id+'/description'}>
                                                         <img className='Imagen' src={p.picture} alt='una imagen'/>
                                                       </a>
 
@@ -48,7 +48,7 @@ class Lista extends Component {
                                                         <section className='Column'>
                                                           <p className='Precio'>{p.price.currency==='ARS'?'$ ':'USD '}
                                                                                 {p.price.amount}{p.price.decimals=='0'?'':','+p.price.decimals}</p>                                
-                                                          <Link className='Link' to={'/items/'+p.id+'/description'}>
+                                                          <Link className='Link' to={'/api/items/'+p.id+'/description'}>
                                                             <p className='Titulo'>{p.title}</p>
                                                           </Link>
                                                         </section>

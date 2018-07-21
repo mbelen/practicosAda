@@ -14,7 +14,7 @@ class Detalle extends Component {
 
   componentWillMount(){ 
   	const id = this.props.match.params.id;
-    fetch(`/items/${id}`)
+    fetch(`/api/items/${id}`)
    .then(res=>res.json())
    .then(res=>{
       this.setState({producto:res.item,loading:true});

@@ -18,8 +18,8 @@ class App extends Component {
       	<Form/>
   	    <Router>
   	      <section className='Rutas'>		
-  		      <Route exact path="/items" component={Lista}/>
-            <Route path="/items/:id" component={Detalle}/>
+  		      <Route exact path="/api/items" component={Lista}/>
+            <Route path="/api/items/:id" component={Detalle}/>
   		    </section>
   		  </Router>
       </section>
