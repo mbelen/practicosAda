@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import './Form.css'
-import busquedaLupa from '../busqueda.png'
+import busquedaLupa from '../img/busqueda.png';
+import icono from '../img/icono.png';
+import './css/Form.css';
 
 class Form extends Component {
 
-
-onSubmit (e) {
-}
   render() {
     return (
       <section className="Search">
 	      <section className='ContForm'>
 		        <form action='/items' method='get'>
-		        	<input className='inputSearch' type="text" placeholder='Nunca dejes de buscar' name="q" />
+		        	<section className='ContenedorIcono'>
+		        		<img className='Icono' src={icono}/>
+		        	</section>
+		        	<input className='inputSearch' type="text" placeholder='Nunca dejes de buscar' name="search" />
 		        	<button type="submit" className="Boton"><img src={busquedaLupa}/></button>
 		        </form>
 	      </section>

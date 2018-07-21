@@ -2,6 +2,12 @@
 	font-family: Verdana;
 }
 
+.Loader{
+	margin-top: 7em;
+	width: 85px;
+	height: auto;
+}
+
 ul li{
 	list-style: none;
 }
@@ -39,13 +45,14 @@ li img{
 }
 
 .Precio{
-	font-weight: bold;
+	font-size: 1.5em;
 }
 
 .Ubicacion{
 	width: 10em;
-	color: #404040;
+	color: gray;
 	font-size: 0.8em;
+	padding-right: 1.5em;
 }
 
 .Link{

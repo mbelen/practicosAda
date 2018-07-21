@@ -1,4 +1,4 @@
-.ContenedorDetalle{
+.Detalle{
 	display: flex;
 	flex-direction: column;
 	background-color: white;
@@ -15,7 +15,7 @@
 
 .InfoLateral{
 	display: flex;
-	width: 38%;
+	width: 40%;
 	flex-direction: column;
 }
 
@@ -23,12 +23,19 @@
 	display: flex;
 	margin-bottom: 0.7em;
 	font-size: 0.85em;
+	color: gray;
 }
 
+.Detalle .Titulo p{
+	font-size: 1.1em;
+	font-weight: bold;
+	color: black;
+
+}
 
 .Descripcion{
-	width: 85%;
-	text-align: left;
+	width: 100%;
+	text-align: justify;
 }
 
 .Descripcion p{
@@ -36,12 +43,14 @@
 	color: gray;
 }
 
-.Descripcion h3{
+.Descripcion .Titulo{
 	margin-bottom: 0.5em; 
 	color: #404040;
+	font-weight: bold;
+	font-size: 1.1em;
 }
 
-.Precio p{
+.Detalle .Precio p{
 	font-size: 1.5em;
 }
 
@@ -52,9 +61,9 @@
 
 .ContenedorDetalle .Boton{
 	padding: 1em;
-	color: #04B486;
+	color: #4F2D83;
 	font-weight: bold;
-	background-color: #ff6600;
+	background-color: #F78E1E;
 	border-radius: 4px;
 	margin-top: 1.5em;
 	text-decoration: none;

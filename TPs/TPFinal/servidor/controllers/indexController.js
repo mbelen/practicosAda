@@ -2,6 +2,7 @@ const indexService = require('../services/indexService')
 
 const self = {}
 
+//Controller que devuelve Json que incluye lista de los primeros cuatro productos que coinciden con la búsqueda
 self.productsList = function (req, res, next) {
 	
 var busqueda=req.query.search;
@@ -15,7 +16,7 @@ return indexService.getProducts(busqueda)
 	})
 }
 
-
+//Controller que devuelve Json que contiene la info del producto seleccionado
 self.getDetailProduct = function (req,res,next){
 var id=req.params.id;
 
