@@ -26,7 +26,7 @@ class Detalle extends Component {
   
   render() {
     if(!this.state.loading){
-      return(<img className='Loader' src={loader}/>)
+      return(<img alt='Cargando...' className='Loader' src={loader}/>)
     }else{
 
       return(
@@ -34,7 +34,7 @@ class Detalle extends Component {
           <BreadCrumb arrayCate={this.state.producto.categories} />
           <section className='Detalle'>
             <section className='RowProducto'>
-              <img className='Imagen' src={this.state.producto.picture} alt='una imagen'/>
+              <img className='Imagen' src={this.state.producto.picture} alt='Producto detalle'/>
               <section className='InfoLateral'>
                 <p className='CondicionVendidos'>{this.state.producto.condition==='new'?'Nuevo':'Usado'}
                                                    {' - '+this.state.producto.sold_quantity+' Vendidos' }</p>
@@ -44,7 +44,7 @@ class Detalle extends Component {
                 <section className='Precio'>
                   <p>{this.state.producto.price.currency==='ARS'?'$ ':'USD '}
                      {this.state.producto.price.amount}
-                     {this.state.producto.price.decimals=='0'?'':','+this.state.producto.price.decimals}</p>
+                     {this.state.producto.price.decimals===0?'':','+this.state.producto.price.decimals}</p>
                 </section>
                 <a className='Boton'>Comprar</a>
 

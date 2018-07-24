@@ -2,7 +2,7 @@ const axios = require('axios')
 const service = {}
 
 //Función para determinar la categoría que más resultados obtuvo
-    function getMayorCategory(arr){
+    function getMayorCategory(arr, result = []){
         for (var i=0; i<arr.length;i++){
             var index=result.findIndex(item=>item.categoria==arr[i].category_id);
             if(index!=-1)
@@ -17,8 +17,9 @@ const service = {}
                 mayor=result[i].count; indice=i;
             }
         }
-        return index; 
+        return result[indice].categoria
     }
+
 
 //Función para obtener parte entera y parte decimal de un precio 
     function splitPrice(price){
@@ -40,6 +41,12 @@ service.getProducts = function (search) {
     .get(`https://api.mercadolibre.com/sites/MLA/search?q=${search}&limit=4`)
     .then(res=>res.data.results)
     .then(data=>{
+
+        if(data.length===0){//si no hay coincidencias en la búsqueda-->retorna el objeto con array items vacío 
+            objeto.items=[];
+            return objeto;
+        }
+
         objeto.categories= []; objeto.items= [];
 
         data.map(function(d){ 
@@ -56,24 +63,23 @@ service.getProducts = function (search) {
                 prod.category_id= d.category_id;
 
                 objeto.items.push(prod);
-        })    
-        return objeto;           
-    })
-    .then(productos=>{
-        var arr=productos.items; result=[];
-        let indiceMayorCategoria=getMayorCategory(arr);
+        })   
+
+        var arr=objeto.items;
+        var result=[]; 
+        let categoria=getMayorCategory(arr);
 
         //Solicitud a la API para obtener propiedad categories(array) de la lista
         return axios
-            .get(`https://api.mercadolibre.com/categories/${result[indiceMayorCategoria].categoria}`)
+            .get(`https://api.mercadolibre.com/categories/${categoria}`)
             .then(res=> res.data)
             .then(data=>{
                 data.path_from_root.map(item=>objeto.categories.push(item.name));
                 return objeto;
             })
     })
-    .catch(function(){
-        console.log('no puede responder pedido a API productos')
+    .catch(function(e){
+        console.log('no puede responder pedido a API productos', e)
     })
 }
 
@@ -104,8 +110,8 @@ service.getDetailProduct = function(id){
                 return objeto;
         })
         .then(producto=>{
-        //Solicitud a la API para obtener propiedad description del item
-        return axios
+            //Solicitud a la API para obtener propiedad description del item
+            return axios
                 .get(`https://api.mercadolibre.com/items/${id}/description`)
                 .then(res=>res.data)        
                 .then(data=>{
@@ -113,18 +119,18 @@ service.getDetailProduct = function(id){
                   return objeto;
                 })
                 .then(res=>{
-                //Solicitud a la API para obtener propiedad categories(array) del item
-                return axios
-                    .get(`https://api.mercadolibre.com/categories/${res.item.category_id}`)            
-                    .then(res=>res.data)
-                    .then(data=>{
-                        data.path_from_root.map(item=>objeto.item.categories.push(item.name));
-                        return objeto;
+                    //Solicitud a la API para obtener propiedad categories(array) del item
+                    return axios
+                        .get(`https://api.mercadolibre.com/categories/${res.item.category_id}`)            
+                        .then(res=>res.data)
+                        .then(data=>{
+                            data.path_from_root.map(item=>objeto.item.categories.push(item.name));
+                            return objeto;
                     })
                 })
         })
-        .catch(function(){
-            console.log('no puede responder pedido a API getDetailProduct')
+        .catch(function(e){
+            console.log('no puede responder pedido a API getDetailProduct',e)
         })
 }        
 

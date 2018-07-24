@@ -6,8 +6,10 @@ export const BreadCrumb = (props) =>
   <div className='ContenedorBreadCrumb'>
     {props.arrayCate.map(function(item,i){
         return (
+
           <ul className='ListaBreadCrumb'>
-              <li>{item}{i<props.arrayCate.length-1?' > ':''}</li>
+            {console.log(i)}
+            <li key={i}>{item}{i<props.arrayCate.length-1?' > ':''}</li>
           </ul>
         )  
         }

@@ -11,8 +11,8 @@ return indexService.getProducts(busqueda)
 	.then(function(products){
 		return res.json(products)
 	})
-	.catch(function(){
-		console.log('no se pueden traer los products')
+	.catch(function(e){
+		console.log('no se pueden traer los products',e)
 	})
 }
 
@@ -24,8 +24,8 @@ return indexService.getDetailProduct(id)
 	.then(function(descripcion){
 		return res.json(descripcion)
 	})
-	.catch(function(){
-		console.log('no se puede traer  el detalle de products')
+	.catch(function(e){
+		console.log('no se puede traer  el detalle de products',e)
 	})
 
 }
